@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { convertStyleToProps } from './utils';
+//import { View } from 'react-native';
 
-export default class View extends Component {
+export default class Align extends Component {
 
     itemStyle;
 
@@ -61,8 +62,8 @@ export default class View extends Component {
     render() {
         // This will fill any previous flex container but override the flex direction
         // to make sure we always use row which is what left/right top/bottom is based on
-        return <div style={{ flex: '1', display: 'flex', flexDirection: 'row' }}>
-            <div style={this.itemStyle}>
+        return <div style={{ flex: 1, display: 'flex', flexDirection: 'row' }}>
+            <div div style={this.itemStyle}>
                 {this.props.children}
             </div>
         </div>

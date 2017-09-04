@@ -1,0 +1,1 @@
+xcopy "../../../src" "react-awesome-grid"
