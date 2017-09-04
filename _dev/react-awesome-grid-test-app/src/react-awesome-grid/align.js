@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { convertStyleToProps } from './utils';
-//import { View } from 'react-native';
+import BaseElement from './base-element';
 
 export default class Align extends Component {
 
@@ -62,10 +62,10 @@ export default class Align extends Component {
     render() {
         // This will fill any previous flex container but override the flex direction
         // to make sure we always use row which is what left/right top/bottom is based on
-        return <div style={{ flex: 1, display: 'flex', flexDirection: 'row' }}>
-            <div div style={this.itemStyle}>
+        return <BaseElement style={{ flex: 1, display: 'flex', flexDirection: 'row' }}>
+            <BaseElement style={this.itemStyle}>
                 {this.props.children}
-            </div>
-        </div>
+            </BaseElement>
+        </BaseElement>
     }
 }

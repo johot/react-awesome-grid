@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { convertStyleToProps, generateRowColumnSizeStyle } from './utils';
-// ***React-Native*** import { View } from 'react-native';
+import BaseElement from './base-element'
 import Align from './align'
 import Column from './column'
 import Row from './row'
@@ -56,15 +56,15 @@ export default class ColumnRow extends Component {
 
         // Wrap in Align block?
         if (this.props.horizontalContentAlignment || this.props.verticalContentAlignment) {
-            return <div style={this.itemStyle}>
+            return <BaseElement style={this.itemStyle}>
                 <Align horizontalAlignment={this.props.horizontalContentAlignment || "left"} verticalAlignment={this.props.verticalContentAlignment || "top"}>
                     {this.props.children}
                 </Align>
-            </div>
+            </BaseElement>
         } else {
-            return <div style={this.itemStyle}>
+            return <BaseElement style={this.itemStyle}>
                 {this.props.children}
-            </div>
+            </BaseElement>
         }
     }
 }

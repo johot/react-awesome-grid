@@ -20,7 +20,7 @@ class App extends Component {
             </Column>
             <Column>
               <Column width="100px" backgroundColor={colors.teal400}>Col 100px</Column>
-              <Column width="2*" backgroundColor={colors.teal500} horizontalContentAlignment="center" verticalContentAlignment="bottom" >Col 2*</Column>
+              <Column width="2*" backgroundColor={colors.teal500} horizontalContentAlignment="center" verticalContentAlignment="bottom" >Col 2*, bottom center</Column>
               <Column width="1*" backgroundColor={colors.teal600}>Col 1*</Column>
             </Column>
           </Row>

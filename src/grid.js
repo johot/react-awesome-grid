@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Column from './column'
 import { convertStyleToProps } from './utils';
+import BaseElement from './base-element';
+
 // ***React-Native*** import { View } from 'react-native';
 
 export default class Grid extends Component {
@@ -27,9 +29,9 @@ export default class Grid extends Component {
     }
     render() {
         this.updateStyle();
-
-        return <div style={this.itemStyle}>
+        
+        return <BaseElement style={this.itemStyle}>
             {this.props.children}
-        </div>
+        </BaseElement>
     }
 }
