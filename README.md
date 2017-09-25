@@ -4,7 +4,7 @@ _Awesome grid and layout components for React. Based on flexbox, inspired by the
 ## Why?
 Flexbox is great, but the syntax is not. Was it `direction: row` or `direction: column` I should use? Did `justify-content` or `align-items` center my content vertically?
 
-Coming from a backgground working with XAML, and especially the XAML Grid component, we know how easy it _could be_.
+Coming from a background working with XAML, and especially the XAML Grid component, we know how easy it _could be_.
 
 This is an attempt of making a flexbox grid component inspired by the syntax of the XAML Grid.
 
@@ -24,7 +24,7 @@ Rows will lay out content from top to bottom and have a `height` property. Colum
 
 * Auto (`auto`) - the height/width will automatically size to the content of the row/column.
 * Proportional (`*`) - fill the available space proportional to other row/columns also using the star unit. This is like working with percentages but better since we don't have to make sure the sum is 100%. Three columns using `1*`, `1*`, `2*` for example is the same as `25*`, `25*`, `50*` which in percent would be 25%, 25%, 50%. Two rows using `1*`, `1*` would give us two equally sized rows (50% each).
-* Absolute - use absolute (pixel, em, rem etc) values.
+* Absolute - use absolute (pixel, em, rem etc) values (eg. `20`, `20px` or `20rem`).
 
 ### Sample usage
 
