@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-import { Grid, Row, Column } from './react-awesome-grid/'
+import { Grid, Row, Column } from 'react-awesome-grid'
 import { colors } from 'material-design-palette';
 
 class App extends Component {
