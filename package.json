@@ -1,6 +1,6 @@
 {
-  "name": "react-awesome-grid",
-  "version": "0.1.0",
+  "name": "react-awesome-grid-dev",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "@types/react": "^16.0.31",
