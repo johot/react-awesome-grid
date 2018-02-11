@@ -1,38 +1,27 @@
 {
   "name": "react-awesome-grid",
-  "version": "0.2.1",
-  "description": "Awesome grid and layout components for React. Based on flexbox, inspired by the syntax of XAML. Making advanced, or simple, layouts have never been easier.",
-  "main": "build/index.js",
-  "peerDependencies": {
-    "react": "^15.5.4"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/johot/react-awesome-grid.git"
-  },
-  "bugs": {
-    "url": "https://github.com/johot/react-awesome-grid/issues"
-  },
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "react": "^15.5.4"
+    "@types/react": "^16.0.31",
+    "@types/react-dom": "^16.0.3",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-scripts-ts": "2.8.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --watch",
-    "build": "webpack"
-  },
-  "author": {
-    "name": "Johan Otterud",
-    "email": "johan.otterud@gmail.com"
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject",
+    "build-library": "npm run clean-build && cd src && cd library && tsc && cp package.json ../../build/dist/ && Echo Build completed!",
+    "publish-library": "cd build/dist && npm publish && echo Package published!",
+    "clean-build": "rm -rf build"
   },
   "devDependencies": {
-    "webpack": "^2.6.1",
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.24.1",
-    "babel-loader": "^7.0.0",
-    "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-plugin-transform-react-jsx": "^6.24.1",
-    "babel-preset-env": "^1.5.1",
-    "babel-preset-react": "^6.24.1"
+    "@types/jest": "^21.1.9",
+    "@types/node": "^8.5.2",
+    "@types/react": "^16.0.31",
+    "@types/react-dom": "^16.0.3"
   }
 }

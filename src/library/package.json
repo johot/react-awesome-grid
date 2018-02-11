@@ -1,0 +1,17 @@
+{
+  "name": "react-awesome-grid",
+  "version": "0.3.1",
+  "description": "An awesome React Native grid powered by flexbox. Building layouts have never been easier!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "peerDependencies": {
+    "react": "^16.0.0"
+  },
+  "dependencies": {
+    "react": "^16.0.0"
+  }
+}
