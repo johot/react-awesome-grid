@@ -1,7 +1,8 @@
 {
   "name": "react-awesome-grid",
-  "version": "0.3.1",
-  "description": "An awesome React Native grid powered by flexbox. Building layouts have never been easier!",
+  "version": "0.5.0",
+  "description":
+    "Awesome grid-layout components for React, based on flexbox. Making layouts in React have never been easier.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -66,7 +66,7 @@ import { Grid, Column, Row } from "react-awesome-grid";
 
 #### Three rows height: 1*, 1*, 1\* (33% each)
 
-![Sample 1](/docs/sample1.png)
+![Sample 1](https://github.com/johot/react-awesome-grid/blob/master/docs/sample1.png)
 
 ```jsx
 <Grid>
@@ -78,7 +78,7 @@ import { Grid, Column, Row } from "react-awesome-grid";
 
 #### Two columns width: 1*, 1* (50% each)
 
-![Sample 2](/docs/sample2.png)
+![Sample 2](https://github.com/johot/react-awesome-grid/blob/master/docs/sample2.png)
 
 ```jsx
 <Grid>
@@ -91,7 +91,7 @@ import { Grid, Column, Row } from "react-awesome-grid";
 
 #### Three rows height: 1*, 2*, auto, 100px
 
-![Sample 3](/docs/sample3.png)
+![Sample 3](https://github.com/johot/react-awesome-grid/blob/master/docs/sample3.png)
 
 ```jsx
 <Grid>
@@ -108,7 +108,7 @@ import { Grid, Column, Row } from "react-awesome-grid";
 
 #### Three columns width: 2*, 3*, auto, 50px
 
-![Sample 4](/docs/sample4.png)
+![Sample 4](https://github.com/johot/react-awesome-grid/blob/master/docs/sample4.png)
 
 ```jsx
 <Grid>
@@ -125,7 +125,7 @@ import { Grid, Column, Row } from "react-awesome-grid";
 
 #### Rows with inner columns
 
-![Sample 5](/docs/sample5.png)
+![Sample 5](https://github.com/johot/react-awesome-grid/blob/master/docs/sample5.png)
 
 ```jsx
 <Grid>
@@ -139,7 +139,7 @@ import { Grid, Column, Row } from "react-awesome-grid";
 
 #### Columns with inner rows
 
-![Sample 6](/docs/sample6.png)
+![Sample 6](https://github.com/johot/react-awesome-grid/blob/master/docs/sample6.png)
 
 ```jsx
 <Grid>
@@ -185,7 +185,7 @@ import { Grid, Column, Row } from "react-awesome-grid";
 
 #### Vertical content alignment
 
-![Sample 8](/docs/sample8.png)
+![Sample 8](https://github.com/johot/react-awesome-grid/blob/master/docs/sample8.png)
 
 ```jsx
 <Grid>
@@ -212,3 +212,7 @@ import { Grid, Column, Row } from "react-awesome-grid";
 ```
 
 > Note: Vertical content alignment with `space-around` or `space-between` only works in a `<Column />`
+
+_Enjoy!_
+
+PS. This library is also available for react native here: http://www.github.com/johot/react-native-awesome-grid
