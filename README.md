@@ -68,8 +68,6 @@ import { Grid, Column, Row } from "react-awesome-grid";
 
 ![Sample 1](/docs/sample1.png)
 
-<img src="/docs/sample1.png">
-
 ```jsx
 <Grid>
   <Row height="1*">Row #1</Row>
@@ -80,7 +78,7 @@ import { Grid, Column, Row } from "react-awesome-grid";
 
 #### Two columns width: 1*, 1* (50% each)
 
-<div style="display: flex; flex-direction: row; height: 400px; width: 500px;"><div style="display: flex; flex-direction: column; background-color: rgb(248, 187, 208); flex-grow: 1; flex-basis: 0px; overflow: hidden;">Col #1</div><div style="display: flex; flex-direction: column; background-color: rgb(244, 143, 177); flex-grow: 1; flex-basis: 0px; overflow: hidden;">Col #2</div></div>
+![Sample 2](/docs/sample2.png)
 
 ```jsx
 <Grid>
@@ -93,7 +91,7 @@ import { Grid, Column, Row } from "react-awesome-grid";
 
 #### Three rows height: 1*, 2*, auto, 100px
 
-<div style="display: flex; flex-direction: column; height: 400px; width: 500px;"><div style="display: flex; flex-direction: row; background-color: rgb(225, 190, 231); flex-grow: 1; flex-basis: 0px; overflow: hidden;">A row</div><div style="display: flex; flex-direction: row; background-color: rgb(206, 147, 216); flex-grow: 2; flex-basis: 0px; overflow: hidden;">A row twice as high as the first</div><div style="display: flex; flex-direction: row; background-color: rgb(186, 104, 200); flex-basis: auto; overflow: hidden;">Auto sizing height<br>to this row</div><div style="display: flex; flex-direction: row; background-color: rgb(171, 71, 188); flex-basis: 100px; overflow: hidden;">100 pixel high row</div></div>
+![Sample 3](/docs/sample3.png)
 
 ```jsx
 <Grid>
@@ -110,7 +108,7 @@ import { Grid, Column, Row } from "react-awesome-grid";
 
 #### Three columns width: 2*, 3*, auto, 50px
 
-<div style="display: flex; flex-direction: row; height: 400px; width: 500px;"><div style="display: flex; flex-direction: column; background-color: rgb(187, 222, 251); flex-grow: 2; flex-basis: 0px; overflow: hidden;">A column</div><div style="display: flex; flex-direction: column; background-color: rgb(144, 202, 249); flex-grow: 3; flex-basis: 0px; overflow: hidden;">A column 1.5 times wider than the first</div><div style="display: flex; flex-direction: column; background-color: rgb(100, 181, 246); flex-basis: auto; overflow: hidden;">Auto sizing width<br> to this column</div><div style="display: flex; flex-direction: column; background-color: rgb(66, 165, 245); flex-basis: 50px; overflow: hidden;">50 pixel wide column</div></div>
+![Sample 4](/docs/sample4.png)
 
 ```jsx
 <Grid>
@@ -127,7 +125,7 @@ import { Grid, Column, Row } from "react-awesome-grid";
 
 #### Rows with inner columns
 
-<div style="display: flex; flex-direction: column; height: 400px; width: 500px;"><div style="display: flex; flex-direction: row; background-color: rgb(255, 224, 178); flex-grow: 1; flex-basis: 0px; overflow: hidden;">Row</div><div style="display: flex; flex-direction: row; flex-grow: 1; flex-basis: 0px; overflow: hidden;"><div style="display: flex; flex-direction: column; background-color: rgb(255, 204, 128); flex-grow: 1; flex-basis: 0px; overflow: hidden;">Inner column #1</div><div style="display: flex; flex-direction: column; background-color: rgb(255, 183, 77); flex-grow: 1; flex-basis: 0px; overflow: hidden;">Inner column #2</div></div></div>
+![Sample 5](/docs/sample5.png)
 
 ```jsx
 <Grid>
@@ -141,7 +139,7 @@ import { Grid, Column, Row } from "react-awesome-grid";
 
 #### Columns with inner rows
 
-<div style="display: flex; flex-direction: row; height: 400px; width: 500px;"><div style="display: flex; flex-direction: column; background-color: rgb(240, 244, 195); flex-grow: 1; flex-basis: 0px; overflow: hidden;">Column</div><div style="display: flex; flex-direction: column; flex-grow: 1; flex-basis: 0px; overflow: hidden;"><div style="display: flex; flex-direction: row; background-color: rgb(230, 238, 156); flex-grow: 1; flex-basis: 0px; overflow: hidden;">Inner row #1</div><div style="display: flex; flex-direction: row; background-color: rgb(220, 231, 117); flex-grow: 1; flex-basis: 0px; overflow: hidden;">Inner row #2</div></div></div>
+![Sample 6](/docs/sample6.png)
 
 ```jsx
 <Grid>
@@ -157,7 +155,7 @@ import { Grid, Column, Row } from "react-awesome-grid";
 
 #### Horizontal content alignment
 
-<div style="display: flex; flex-direction: column; height: 200px; width: 500px;"><div style="display: flex; flex-direction: row; background-color: rgb(255, 249, 196); flex-grow: 1; flex-basis: 0px; overflow: hidden; justify-content: flex-start;">Left</div><div style="display: flex; flex-direction: row; background-color: rgb(255, 245, 157); flex-grow: 1; flex-basis: 0px; overflow: hidden; justify-content: center;">Center</div><div style="display: flex; flex-direction: row; background-color: rgb(255, 241, 118); flex-grow: 1; flex-basis: 0px; overflow: hidden; justify-content: flex-end;">Right</div><div style="display: flex; flex-direction: row; background-color: rgb(255, 238, 88); flex-grow: 1; flex-basis: 0px; overflow: hidden; justify-content: space-around;"><span>Space around</span><span>Space around</span><span>Space around</span></div><div style="display: flex; flex-direction: row; background-color: rgb(255, 235, 59); flex-grow: 1; flex-basis: 0px; overflow: hidden; justify-content: space-between;"><span>Space between</span><span>Space between</span><span>Space between</span></div></div>
+![Sample 7](/docs/sample7.png)
 
 ```jsx
 <Grid>
@@ -187,7 +185,7 @@ import { Grid, Column, Row } from "react-awesome-grid";
 
 #### Vertical content alignment
 
-<div style="display: flex; flex-direction: row; height: 200px; width: 500px;"><div style="display: flex; flex-direction: column; background-color: rgb(255, 205, 210); flex-grow: 1; flex-basis: 0px; overflow: hidden; justify-content: flex-start;">Top</div><div style="display: flex; flex-direction: column; background-color: rgb(239, 154, 154); flex-grow: 1; flex-basis: 0px; overflow: hidden; justify-content: center;">Center</div><div style="display: flex; flex-direction: column; background-color: rgb(229, 115, 115); flex-grow: 1; flex-basis: 0px; overflow: hidden; justify-content: flex-end;">Bottom</div><div style="display: flex; flex-direction: column; background-color: rgb(239, 83, 80); flex-grow: 1; flex-basis: 0px; overflow: hidden; justify-content: space-around;"><span>Space around</span><span>Space around</span><span>Space around</span></div><div style="display: flex; flex-direction: column; background-color: rgb(244, 67, 54); flex-grow: 1; flex-basis: 0px; overflow: hidden; justify-content: space-between;"><span>Space between</span><span>Space between</span><span>Space between</span></div></div>
+![Sample 8](/docs/sample8.png)
 
 ```jsx
 <Grid>
