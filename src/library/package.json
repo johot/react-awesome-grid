@@ -1,6 +1,6 @@
 {
   "name": "react-awesome-grid",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "description":
     "Awesome grid-layout components for React, based on flexbox. Making layouts in React have never been easier.",
   "main": "index.js",

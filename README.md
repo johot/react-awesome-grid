@@ -1,4 +1,4 @@
-# React Awesome Grid
+# React Awesome Grid 👌
 
 _Awesome grid-layout components for React, based on flexbox. Making layouts in React have never been easier._
 
@@ -66,7 +66,7 @@ import { Grid, Column, Row } from "react-awesome-grid";
 
 #### Three rows height: 1*, 1*, 1\* (33% each)
 
-![Sample 1](https://github.com/johot/react-awesome-grid/blob/master/docs/sample1.png)
+![Sample 1](https://raw.githubusercontent.com/johot/react-awesome-grid/master/docs/sample1.png)
 
 ```jsx
 <Grid>
@@ -78,7 +78,7 @@ import { Grid, Column, Row } from "react-awesome-grid";
 
 #### Two columns width: 1*, 1* (50% each)
 
-![Sample 2](https://github.com/johot/react-awesome-grid/blob/master/docs/sample2.png)
+![Sample 2](https://raw.githubusercontent.com/johot/react-awesome-grid/master/docs/sample2.png)
 
 ```jsx
 <Grid>
@@ -91,7 +91,7 @@ import { Grid, Column, Row } from "react-awesome-grid";
 
 #### Three rows height: 1*, 2*, auto, 100px
 
-![Sample 3](https://github.com/johot/react-awesome-grid/blob/master/docs/sample3.png)
+![Sample 3](https://raw.githubusercontent.com/johot/react-awesome-grid/master/docs/sample3.png)
 
 ```jsx
 <Grid>
@@ -108,7 +108,7 @@ import { Grid, Column, Row } from "react-awesome-grid";
 
 #### Three columns width: 2*, 3*, auto, 50px
 
-![Sample 4](https://github.com/johot/react-awesome-grid/blob/master/docs/sample4.png)
+![Sample 4](https://raw.githubusercontent.com/johot/react-awesome-grid/master/docs/sample4.png)
 
 ```jsx
 <Grid>
@@ -125,7 +125,7 @@ import { Grid, Column, Row } from "react-awesome-grid";
 
 #### Rows with inner columns
 
-![Sample 5](https://github.com/johot/react-awesome-grid/blob/master/docs/sample5.png)
+![Sample 5](https://raw.githubusercontent.com/johot/react-awesome-grid/master/docs/sample5.png)
 
 ```jsx
 <Grid>
@@ -139,7 +139,7 @@ import { Grid, Column, Row } from "react-awesome-grid";
 
 #### Columns with inner rows
 
-![Sample 6](https://github.com/johot/react-awesome-grid/blob/master/docs/sample6.png)
+![Sample 6](https://raw.githubusercontent.com/johot/react-awesome-grid/master/docs/sample6.png)
 
 ```jsx
 <Grid>
@@ -185,7 +185,7 @@ import { Grid, Column, Row } from "react-awesome-grid";
 
 #### Vertical content alignment
 
-![Sample 8](https://github.com/johot/react-awesome-grid/blob/master/docs/sample8.png)
+![Sample 8](https://raw.githubusercontent.com/johot/react-awesome-grid/master/docs/sample8.png)
 
 ```jsx
 <Grid>
