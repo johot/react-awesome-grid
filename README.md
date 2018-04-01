@@ -66,7 +66,9 @@ import { Grid, Column, Row } from "react-awesome-grid";
 
 #### Three rows height: 1*, 1*, 1\* (33% each)
 
-<div style="display: flex; flex-direction: column; height: 400px; width: 500px;"><div style="display: flex; flex-direction: row; background-color: rgb(178, 223, 219); flex-grow: 1; flex-basis: 0px; overflow: hidden;">Row #1</div><div style="display: flex; flex-direction: row; background-color: rgb(128, 203, 196); flex-grow: 1; flex-basis: 0px; overflow: hidden;">Row #2</div><div style="display: flex; flex-direction: row; background-color: rgb(77, 182, 172); flex-grow: 1; flex-basis: 0px; overflow: hidden;">Row #3</div></div>
+![Sample 1](docs/sample1.png)
+
+<img src="docs/sample1.png">
 
 ```jsx
 <Grid>
