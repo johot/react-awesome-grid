@@ -1,13 +1,17 @@
 {
   "name": "react-awesome-grid",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "description":
     "Awesome grid-layout components for React, based on flexbox. Making layouts in React have never been easier.",
   "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:johot/react-awesome-grid.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Johan Otterud <johan.otterud@gmail.com>",
   "license": "MIT",
   "peerDependencies": {
     "react": "*"
