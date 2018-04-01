@@ -1,6 +1,6 @@
 {
   "name": "react-awesome-grid",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description":
     "Awesome grid-layout components for React, based on flexbox. Making layouts in React have never been easier.",
   "main": "index.js",
@@ -10,9 +10,6 @@
   "author": "",
   "license": "MIT",
   "peerDependencies": {
-    "react": "^16.0.0"
-  },
-  "dependencies": {
-    "react": "^16.0.0"
+    "react": "*"
   }
 }
