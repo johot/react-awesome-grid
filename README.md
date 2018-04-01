@@ -48,9 +48,9 @@ Horizontal content alignment:
 
 Vertical content alignment:
 
-* `bottom`
-* `center`
 * `top`
+* `center`
+* `bottom`
 * `space-around`
 * `space-between`
 
