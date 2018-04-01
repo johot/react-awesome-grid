@@ -2,141 +2,338 @@ import * as React from "react";
 import "./App.css";
 import { Grid, Column } from "./library/index";
 import Row from "./library/row";
+import * as colors from "./colors";
+const ReactMarkdown = require("react-markdown");
+
+//https://material.io/guidelines/style/color.html#color-color-palette
 
 class App extends React.Component {
   render() {
     return (
-      <div style={{ margin: 30 }}>
+      <div className="markdown-body" style={{ margin: 30 }}>
+        <h1>React Awesome Grid - Test Bench</h1>
         <h2>Even distribution</h2>
         <h3>Three rows height: 1*, 1*, 1* (33% each)</h3>
-        <Grid style={{ backgroundColor: "red", width: "500px", height: "600px" }}>
-          <Row style={{ backgroundColor: "orange" }} />
-          <Row style={{ backgroundColor: "pink" }} />
-          <Row style={{ backgroundColor: "orange" }} />
-        </Grid>
-        <h3>Two columns width: 1*, 1* (50% each)</h3>
-        <Grid style={{ backgroundColor: "red", width: "500px", height: "600px" }}>
-          <Column style={{ backgroundColor: "purple" }} />
-          <Column style={{ backgroundColor: "blue" }} />
-        </Grid>
-        <h2>Variable width/height</h2>
-        <h3>Three rows height: 1*, 2*, auto, 100px</h3>
-        <Grid style={{ backgroundColor: "red", width: "500px", height: "600px" }}>
-          <Row height="1*" style={{ backgroundColor: "orange" }} />
-          <Row height="2*" style={{ backgroundColor: "pink" }} />
-          <Row height="auto" style={{ backgroundColor: "orange" }}>
-            Auto sizing<br /> to this text
+        <Grid style={{ width: "500px", height: "400px" }}>
+          <Row style={{ backgroundColor: colors.teal100 }} height="1*">
+            Row #1
           </Row>
-          <Row height="100px" style={{ backgroundColor: "pink" }} />
+          <Row style={{ backgroundColor: colors.teal200 }} height="1*">
+            Row #2
+          </Row>
+          <Row style={{ backgroundColor: colors.teal300 }} height="1*">
+            Row #3
+          </Row>
         </Grid>
+        <Code
+          markdown={`
+\`\`\`
+<Grid>
+  <Row height="1*">Row #1</Row>
+  <Row height="1*">Row #2</Row>
+  <Row height="1*">Row #3</Row>
+</Grid>
+\`\`\`
+`}
+        />
+        <h3>Two columns width: 1*, 1* (50% each)</h3>
+        <Grid style={{ width: "500px", height: "400px" }}>
+          <Column style={{ backgroundColor: colors.pink100 }}>Col #1</Column>
+          <Column style={{ backgroundColor: colors.pink200 }}>Col #2</Column>
+        </Grid>
+        <Code
+          markdown={`
+\`\`\`
+<Grid>
+  <Column>Col #1</Column>
+  <Column>Col #2</Column>
+</Grid>
+\`\`\`
+`}
+        />
+        <h2>Variable height</h2>
+        <h3>Three rows height: 1*, 2*, auto, 100px</h3>
+        <Grid style={{ width: "500px", height: "400px" }}>
+          <Row height="1*" style={{ backgroundColor: colors.purple100 }}>
+            A row
+          </Row>
+          <Row height="2*" style={{ backgroundColor: colors.purple200 }}>
+            A row twice as high as the first
+          </Row>
+          <Row height="auto" style={{ backgroundColor: colors.purple300 }}>
+            Auto sizing height<br />to this row
+          </Row>
+          <Row height="100px" style={{ backgroundColor: colors.purple400 }}>
+            100 pixel high row
+          </Row>
+        </Grid>
+        <Code
+          markdown={`
+\`\`\`
+<Grid>
+  <Row height="1*">A row</Row>
+  <Row height="2*">A row twice as high as the first</Row>
+  <Row height="auto">
+    Auto sizing height<br />to this row
+  </Row>
+  <Row height="100px">100 pixel high row</Row>
+</Grid>
+\`\`\`
+`}
+        />
+        <h2>Variable width</h2>
         <h3>Three columns width: 2*, 3*, auto, 50px</h3>
-        <Grid style={{ backgroundColor: "red", width: "500px", height: "600px" }}>
-          <Column width="2*" style={{ backgroundColor: "orange" }} />
-          <Column width="3*" style={{ backgroundColor: "pink" }} />
-          <Column width="auto" style={{ backgroundColor: "orange" }}>
-            Auto sizing<br /> to this text
+        <Grid style={{ width: "500px", height: "400px" }}>
+          <Column width="2*" style={{ backgroundColor: colors.blue100 }}>
+            A column
           </Column>
-          <Column width="50px" style={{ backgroundColor: "pink" }} />
+          <Column width="3*" style={{ backgroundColor: colors.blue200 }}>
+            A column 1.5 times wider than the first
+          </Column>
+          <Column width="auto" style={{ backgroundColor: colors.blue300 }}>
+            Auto sizing width<br /> to this column
+          </Column>
+          <Column width="50px" style={{ backgroundColor: colors.blue400 }}>
+            50 pixel wide column
+          </Column>
         </Grid>
+        <Code
+          markdown={`
+\`\`\`
+<Grid>
+  <Column width="2*">A column</Column>
+  <Column width="3*">A column 1.5 times wider than the first</Column>
+  <Column width="auto">
+    Auto sizing width<br />to this column
+  </Column>
+  <Column width="50px">50 pixel wide column</Column>
+</Grid>
+\`\`\`
+`}
+        />
         <h2>Combining rows and columns</h2>
         <h3>Rows with inner columns</h3>
-        <Grid style={{ backgroundColor: "red", width: "500px", height: "600px" }}>
-          <Row style={{ backgroundColor: "orange" }} />
-          <Row>
-            <Column style={{ backgroundColor: "blue" }} />
-            <Column style={{ backgroundColor: "purple" }} />
+        <Grid style={{ width: "500px", height: "400px" }}>
+          <Row style={{ backgroundColor: colors.orange100 }} height="1*">
+            Row
+          </Row>
+          <Row height="1*">
+            <Column style={{ backgroundColor: colors.orange200 }} width="1*">
+              Inner column #1
+            </Column>
+            <Column style={{ backgroundColor: colors.orange300 }} width="1*">
+              Inner column #2
+            </Column>
           </Row>
         </Grid>
+        <Code
+          markdown={`
+\`\`\`
+<Grid>
+  <Row height="1*">Row</Row>
+  <Row height="1*">
+    <Column width="1*">Inner column #1</Column>
+    <Column width="1*">Inner column #2</Column>
+  </Row>
+</Grid>
+\`\`\`
+`}
+        />
         <h3>Columns with inner rows</h3>
-        <Grid style={{ backgroundColor: "red", width: "500px", height: "600px" }}>
-          <Column style={{ backgroundColor: "blue" }} />
-          <Column style={{ backgroundColor: "blue" }}>
-            <Row horizontalContentAlignment="center" style={{ backgroundColor: "orange" }} />
-            <Row horizontalContentAlignment="right" style={{ backgroundColor: "yellow" }} />
+        <Grid style={{ width: "500px", height: "400px" }}>
+          <Column style={{ backgroundColor: colors.lime100 }} width="1*">
+            Column
+          </Column>
+          <Column width="1*">
+            <Row height="1*" style={{ backgroundColor: colors.lime200 }}>
+              Inner row #1
+            </Row>
+            <Row height="1*" style={{ backgroundColor: colors.lime300 }}>
+              Inner row #2
+            </Row>
           </Column>
         </Grid>
+        <Code
+          markdown={`
+\`\`\`
+<Grid>
+  <Column width="1*">Column</Column>
+  <Column width="1*">
+    <Row height="1*">Inner row #1</Row>
+    <Row height="1*">Inner row #2</Row>
+  </Column>
+</Grid>
+\`\`\`
+`}
+        />
         <h2>Content alignment</h2>
         <h3>Horizontal content alignment</h3>
-        <Grid style={{ backgroundColor: "red", width: "500px", height: "600px" }}>
-          <Column>
-            <Column horizontalContentAlignment="left" style={{ backgroundColor: "blue" }}>
-              Left
-            </Column>
-            <Column horizontalContentAlignment="center" style={{ backgroundColor: "pink" }}>
-              Center
-            </Column>
-            <Column horizontalContentAlignment="right" style={{ backgroundColor: "blue" }}>
-              Right
-            </Column>
-          </Column>
-          <Column>
-            <Row horizontalContentAlignment="left" style={{ backgroundColor: "pink" }}>
-              Left
-            </Row>
-            <Row horizontalContentAlignment="center" style={{ backgroundColor: "blue" }}>
-              Center
-            </Row>
-            <Row horizontalContentAlignment="right" style={{ backgroundColor: "pink" }}>
-              Right
-            </Row>
-          </Column>
+        <Grid style={{ width: "500px", height: "200px" }}>
+          <Row
+            height="1*"
+            horizontalContentAlignment="left"
+            style={{ backgroundColor: colors.yellow100 }}
+          >
+            Left
+          </Row>
+          <Row
+            height="1*"
+            horizontalContentAlignment="center"
+            style={{ backgroundColor: colors.yellow200 }}
+          >
+            Center
+          </Row>
+          <Row
+            height="1*"
+            horizontalContentAlignment="right"
+            style={{ backgroundColor: colors.yellow300 }}
+          >
+            Right
+          </Row>
+          <Row
+            height="1*"
+            horizontalContentAlignment="space-around"
+            style={{ backgroundColor: colors.yellow400 }}
+          >
+            <span>Space around</span>
+            <span>Space around</span>
+            <span>Space around</span>
+          </Row>
+          <Row
+            height="1*"
+            horizontalContentAlignment="space-between"
+            style={{ backgroundColor: colors.yellow500 }}
+          >
+            <span>Space between</span>
+            <span>Space between</span>
+            <span>Space between</span>
+          </Row>
         </Grid>
+        <Code
+          markdown={`
+\`\`\`
+<Grid>
+  <Row height="1*" horizontalContentAlignment="left">
+    Left
+  </Row>
+  <Row height="1*" horizontalContentAlignment="center">
+    Center
+  </Row>
+  <Row height="1*" horizontalContentAlignment="right">
+    Right
+  </Row>
+  <Row height="1*" horizontalContentAlignment="space-around">
+    <span>Space around</span>
+    <span>Space around</span>
+    <span>Space around</span>
+  </Row>
+  <Row height="1*" horizontalContentAlignment="space-between">
+    <span>Space between</span>
+    <span>Space between</span>
+    <span>Space between</span>
+  </Row>
+</Grid>
+\`\`\`
+`}
+        />
+        <Code
+          markdown={`
+          > Note: Horizontal content alignment with \`space-around\` or \`space-between\` only works in a \`<Row />\`
+`}
+        />
         <h3>Vertical content alignment</h3>
-        <Grid style={{ backgroundColor: "red", width: "500px", height: "600px" }}>
-          <Column>
-            <Column verticalContentAlignment="top" style={{ backgroundColor: "blue" }}>
-              Top
-            </Column>
-            <Column verticalContentAlignment="center" style={{ backgroundColor: "pink" }}>
-              Center
-            </Column>
-            <Column verticalContentAlignment="bottom" style={{ backgroundColor: "blue" }}>
-              Bottom
-            </Column>
+        <Grid style={{ width: "500px", height: "200px" }}>
+          <Column
+            width="1*"
+            verticalContentAlignment="top"
+            style={{ backgroundColor: colors.red100 }}
+          >
+            Top
           </Column>
-          <Column>
-            <Row verticalContentAlignment="top" style={{ backgroundColor: "pink" }}>
-              Top
-            </Row>
-            <Row verticalContentAlignment="center" style={{ backgroundColor: "blue" }}>
-              Center
-            </Row>
-            <Row verticalContentAlignment="bottom" style={{ backgroundColor: "pink" }}>
-              Bottom
-            </Row>
+          <Column
+            width="1*"
+            verticalContentAlignment="center"
+            style={{ backgroundColor: colors.red200 }}
+          >
+            Center
           </Column>
-        </Grid>
-        <h2>Space-around and space-between support</h2>
-        Explain...
-        <h3>Row only: Horizontal content alignment space-around, space-between</h3>
-        <Grid style={{ backgroundColor: "red", width: "500px", height: "200px" }}>
-          <Row horizontalContentAlignment="space-around" style={{ backgroundColor: "pink" }}>
-            <span>Space around</span>
-            <span>Space around</span>
-            <span>Space around</span>
-          </Row>
-          <Row horizontalContentAlignment="space-between" style={{ backgroundColor: "red" }}>
-            <span>Space between</span>
-            <span>Space between</span>
-            <span>Space between</span>
-          </Row>
-        </Grid>
-        <h3>Column only: Vertical content alignment space-around, space-between</h3>
-        <Grid style={{ backgroundColor: "red", width: "500px", height: "200px" }}>
-          <Column verticalContentAlignment="space-around" style={{ backgroundColor: "pink" }}>
+          <Column
+            width="1*"
+            verticalContentAlignment="bottom"
+            style={{ backgroundColor: colors.red300 }}
+          >
+            Bottom
+          </Column>
+          <Column
+            width="1*"
+            verticalContentAlignment="space-around"
+            style={{ backgroundColor: colors.red400 }}
+          >
             <span>Space around</span>
             <span>Space around</span>
             <span>Space around</span>
           </Column>
-          <Column verticalContentAlignment="space-between" style={{ backgroundColor: "red" }}>
+          <Column
+            width="1*"
+            verticalContentAlignment="space-between"
+            style={{ backgroundColor: colors.red500 }}
+          >
             <span>Space between</span>
             <span>Space between</span>
             <span>Space between</span>
           </Column>
         </Grid>
+        <Code
+          markdown={`
+\`\`\`
+<Grid>
+  <Column width="1*" verticalContentAlignment="top">
+    Top
+  </Column>
+  <Column width="1*" verticalContentAlignment="center">
+    Center
+  </Column>
+  <Column width="1*" verticalContentAlignment="bottom">
+    Bottom
+  </Column>
+  <Column width="1*" verticalContentAlignment="space-around">
+    <span>Space around</span>
+    <span>Space around</span>
+    <span>Space around</span>
+  </Column>
+  <Column width="1*" verticalContentAlignment="space-between">
+    <span>Space between</span>
+    <span>Space between</span>
+    <span>Space between</span>
+  </Column>
+</Grid>
+\`\`\`
+`}
+        />
+        <Code
+          markdown={`
+          > Note: Vertical content alignment with \`space-around\` or \`space-between\` only works in a \`<Column />\`
+`}
+        />
       </div>
     );
   }
 }
+
+interface CodeProps {
+  markdown: string;
+}
+
+const Code = (props: CodeProps) => {
+  return (
+    <div
+      style={{
+        marginTop: 10
+      }}
+    >
+      <ReactMarkdown source={props.markdown.trim()} />
+    </div>
+  );
+};
 
 export default App;
