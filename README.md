@@ -66,9 +66,9 @@ import { Grid, Column, Row } from "react-awesome-grid";
 
 #### Three rows height: 1*, 1*, 1\* (33% each)
 
-![Sample 1](docs/sample1.png)
+![Sample 1](/docs/sample1.png)
 
-<img src="docs/sample1.png">
+<img src="/docs/sample1.png">
 
 ```jsx
 <Grid>
