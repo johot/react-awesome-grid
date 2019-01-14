@@ -1,5 +1,5 @@
 import * as React from "react";
-import ColumnRow, { VerticalContentAlignment, HorizontalContentAlignment } from "./column-row";
+import ColumnRow, { VerticalContentAlignment, HorizontalContentAlignment } from "./ColumnRow";
 
 export interface GridProps {
   style?: any;

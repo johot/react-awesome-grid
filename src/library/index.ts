@@ -1,6 +1,6 @@
-import Grid from "./grid";
-import Row from "./row";
-import Column from "./column";
+import Grid from "./Grid";
+import Row from "./Row";
+import Column from "./Column";
 
 export { Grid, Row, Column };
 export default Grid;

@@ -1,9 +1,23 @@
 import * as React from "react";
-import Column from "./column";
-import Row from "./row";
+import Column from "./Column";
+import Row from "./Row";
 
-export type VerticalContentAlignment = "center" | "top" | "bottom" | "flex-start" | "flex-end" | "space-around" | "space-between";
-export type HorizontalContentAlignment = "center" | "left" | "right" | "flex-start" | "flex-end" | "space-around" | "space-between";
+export type VerticalContentAlignment =
+  | "center"
+  | "top"
+  | "bottom"
+  | "flex-start"
+  | "flex-end"
+  | "space-around"
+  | "space-between";
+export type HorizontalContentAlignment =
+  | "center"
+  | "left"
+  | "right"
+  | "flex-start"
+  | "flex-end"
+  | "space-around"
+  | "space-between";
 export type ColumnRowType = "row" | "column";
 
 export interface ColumnRowProps {
@@ -43,9 +57,15 @@ export default class ColumnRow extends React.Component<ColumnRowProps> {
       }
 
       if (this.props.type === "column") {
-        generatedStyle = { ...generatedStyle, justifyContent: contentAlignmentValue };
+        generatedStyle = {
+          ...generatedStyle,
+          justifyContent: contentAlignmentValue
+        };
       } else {
-        generatedStyle = { ...generatedStyle, alignItems: contentAlignmentValue };
+        generatedStyle = {
+          ...generatedStyle,
+          alignItems: contentAlignmentValue
+        };
       }
     }
 
@@ -67,9 +87,15 @@ export default class ColumnRow extends React.Component<ColumnRowProps> {
       }
 
       if (this.props.type === "column") {
-        generatedStyle = { ...generatedStyle, alignItems: contentAlignmentValue };
+        generatedStyle = {
+          ...generatedStyle,
+          alignItems: contentAlignmentValue
+        };
       } else {
-        generatedStyle = { ...generatedStyle, justifyContent: contentAlignmentValue };
+        generatedStyle = {
+          ...generatedStyle,
+          justifyContent: contentAlignmentValue
+        };
       }
     }
 
@@ -124,24 +150,33 @@ export default class ColumnRow extends React.Component<ColumnRowProps> {
     });
 
     if (this.props.verticalContentAlignment && innerRowOrColumns) {
-      console.error("A " + this.props.type + " that uses vertical content alignment has child row/columns. This will cause unexcpected rendering issues and should be avoided.");
+      console.error(
+        "A " +
+          this.props.type +
+          " that uses vertical content alignment has child row/columns. This will cause unexcpected rendering issues and should be avoided."
+      );
     }
 
     if (this.props.horizontalContentAlignment && innerRowOrColumns) {
-      console.error("A " + this.props.type + " that uses horizontal content alignment has child row/columns. This will cause unexcpected rendering issues and should be avoided.");
+      console.error(
+        "A " +
+          this.props.type +
+          " that uses horizontal content alignment has child row/columns. This will cause unexcpected rendering issues and should be avoided."
+      );
     }
 
     // Default values
     let generatedStyle = {
       display: "flex",
-      flexDirection: direction,
-      ...this.props.style
+      flexDirection: direction
     };
 
     // Setup style based on width property
     if (this.props.type === "column") {
       if (this.props.width) {
-        const rowColSizeStyle = this.generateRowColumnSizeStyle(this.props.width);
+        const rowColSizeStyle = this.generateRowColumnSizeStyle(
+          this.props.width
+        );
         // Append
         generatedStyle = { ...generatedStyle, ...rowColSizeStyle };
       }
@@ -151,7 +186,9 @@ export default class ColumnRow extends React.Component<ColumnRowProps> {
       generatedStyle = { ...generatedStyle, ...contentAlignmentStyle };
     } else {
       if (this.props.height) {
-        const rowColSizeStyle = this.generateRowColumnSizeStyle(this.props.height);
+        const rowColSizeStyle = this.generateRowColumnSizeStyle(
+          this.props.height
+        );
         // Append
         generatedStyle = { ...generatedStyle, ...rowColSizeStyle };
       }
@@ -162,7 +199,7 @@ export default class ColumnRow extends React.Component<ColumnRowProps> {
       generatedStyle = { ...generatedStyle, ...contentAlignmentStyle };
     }
 
-    return generatedStyle;
+    return { ...generatedStyle, ...this.props.style };
   }
 }
 
