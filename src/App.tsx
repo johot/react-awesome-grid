@@ -1,7 +1,6 @@
 import * as React from "react";
 import "./App.css";
-import { Grid, Column } from "./library/index";
-import Row from "./library/row";
+import { Grid, Column, Row } from "./library/index";
 import * as colors from "./colors";
 const ReactMarkdown = require("react-markdown");
 
@@ -61,7 +60,9 @@ class App extends React.Component {
             A row twice as high as the first
           </Row>
           <Row height="auto" style={{ backgroundColor: colors.purple300 }}>
-            Auto sizing height<br />to this row
+            Auto sizing height
+            <br />
+            to this row
           </Row>
           <Row height="100px" style={{ backgroundColor: colors.purple400 }}>
             100 pixel high row
@@ -91,7 +92,8 @@ class App extends React.Component {
             A column 1.5 times wider than the first
           </Column>
           <Column width="auto" style={{ backgroundColor: colors.blue300 }}>
-            Auto sizing width<br /> to this column
+            Auto sizing width
+            <br /> to this column
           </Column>
           <Column width="50px" style={{ backgroundColor: colors.blue400 }}>
             50 pixel wide column
@@ -169,41 +171,21 @@ class App extends React.Component {
         <h2>Content alignment</h2>
         <h3>Horizontal content alignment</h3>
         <Grid style={{ width: "500px", height: "200px" }}>
-          <Row
-            height="1*"
-            horizontalContentAlignment="left"
-            style={{ backgroundColor: colors.yellow100 }}
-          >
+          <Row height="1*" horizontalContentAlignment="left" style={{ backgroundColor: colors.yellow100 }}>
             Left
           </Row>
-          <Row
-            height="1*"
-            horizontalContentAlignment="center"
-            style={{ backgroundColor: colors.yellow200 }}
-          >
+          <Row height="1*" horizontalContentAlignment="center" style={{ backgroundColor: colors.yellow200 }}>
             Center
           </Row>
-          <Row
-            height="1*"
-            horizontalContentAlignment="right"
-            style={{ backgroundColor: colors.yellow300 }}
-          >
+          <Row height="1*" horizontalContentAlignment="right" style={{ backgroundColor: colors.yellow300 }}>
             Right
           </Row>
-          <Row
-            height="1*"
-            horizontalContentAlignment="space-around"
-            style={{ backgroundColor: colors.yellow400 }}
-          >
+          <Row height="1*" horizontalContentAlignment="space-around" style={{ backgroundColor: colors.yellow400 }}>
             <span>Space around</span>
             <span>Space around</span>
             <span>Space around</span>
           </Row>
-          <Row
-            height="1*"
-            horizontalContentAlignment="space-between"
-            style={{ backgroundColor: colors.yellow500 }}
-          >
+          <Row height="1*" horizontalContentAlignment="space-between" style={{ backgroundColor: colors.yellow500 }}>
             <span>Space between</span>
             <span>Space between</span>
             <span>Space between</span>
@@ -243,41 +225,21 @@ class App extends React.Component {
         />
         <h3>Vertical content alignment</h3>
         <Grid style={{ width: "500px", height: "200px" }}>
-          <Column
-            width="1*"
-            verticalContentAlignment="top"
-            style={{ backgroundColor: colors.red100 }}
-          >
+          <Column width="1*" verticalContentAlignment="top" style={{ backgroundColor: colors.red100 }}>
             Top
           </Column>
-          <Column
-            width="1*"
-            verticalContentAlignment="center"
-            style={{ backgroundColor: colors.red200 }}
-          >
+          <Column width="1*" verticalContentAlignment="center" style={{ backgroundColor: colors.red200 }}>
             Center
           </Column>
-          <Column
-            width="1*"
-            verticalContentAlignment="bottom"
-            style={{ backgroundColor: colors.red300 }}
-          >
+          <Column width="1*" verticalContentAlignment="bottom" style={{ backgroundColor: colors.red300 }}>
             Bottom
           </Column>
-          <Column
-            width="1*"
-            verticalContentAlignment="space-around"
-            style={{ backgroundColor: colors.red400 }}
-          >
+          <Column width="1*" verticalContentAlignment="space-around" style={{ backgroundColor: colors.red400 }}>
             <span>Space around</span>
             <span>Space around</span>
             <span>Space around</span>
           </Column>
-          <Column
-            width="1*"
-            verticalContentAlignment="space-between"
-            style={{ backgroundColor: colors.red500 }}
-          >
+          <Column width="1*" verticalContentAlignment="space-between" style={{ backgroundColor: colors.red500 }}>
             <span>Space between</span>
             <span>Space between</span>
             <span>Space between</span>

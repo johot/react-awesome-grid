@@ -3,28 +3,25 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@types/react": "^16.0.31",
-    "@types/react-dom": "^16.0.3",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-scripts-ts": "2.8.0"
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-scripts-ts": "3.1.0"
   },
   "scripts": {
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
-    "build-library":
-      "npm run clean-build && cd src && cd library && tsc && cp package.json ../../build/dist/ && cp ../../readme.md ../../build/dist/ && Echo Build completed!",
-    "publish-library":
-      "cd build/dist && npm publish && echo Package published!",
+    "build-library": "npm run clean-build && cd src && cd library && tsc && cp package.json ../../build/dist/ && cp ../../readme.md ../../build/dist/ && Echo Build completed!",
+    "publish-library": "cd build/dist && npm publish && echo Package published!",
     "clean-build": "rm -rf build"
   },
   "devDependencies": {
-    "@types/jest": "^21.1.9",
-    "@types/node": "^8.5.2",
+    "@types/jest": "^23.3.13",
+    "@types/node": "^10.12.18",
     "@types/react": "^16.0.31",
     "@types/react-dom": "^16.0.3",
-    "react-markdown": "^3.3.0"
+    "react-markdown": "^4.0.6",
+    "typescript": "^3.2.4"
   }
 }

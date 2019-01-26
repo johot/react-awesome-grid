@@ -1,6 +1,6 @@
 import * as React from "react";
-import Column from "./column_";
-import Row from "./row_";
+import Column from "./Column";
+import Row from "./Row";
 
 export type VerticalContentAlignment = "center" | "top" | "bottom" | "flex-start" | "flex-end" | "space-around" | "space-between";
 export type HorizontalContentAlignment = "center" | "left" | "right" | "flex-start" | "flex-end" | "space-around" | "space-between";
@@ -101,20 +101,20 @@ export default class ColumnRow extends React.Component<ColumnRowProps> {
       // Star (%)
       itemStyle = {
         flexGrow: widthOrHeightNumber,
-        flexBasis: 0,
-        overflow: "hidden"
+        flexBasis: 0
+        //overflow: "hidden"
       };
     } else if (widthOrHeight === "auto") {
       // Auto
       itemStyle = {
-        flexBasis: "auto",
-        overflow: "hidden"
+        flexBasis: "auto"
+        //overflow: "hidden"
       };
     } else {
       // Pixel
       itemStyle = {
-        flexBasis: widthOrHeightNumber,
-        overflow: "hidden"
+        flexBasis: widthOrHeightNumber
+        //overflow: "hidden"
       };
     }
 
