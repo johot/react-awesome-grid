@@ -43,15 +43,9 @@ export default class ColumnRow extends React.Component<ColumnRowProps> {
       }
 
       if (this.props.type === "column") {
-        generatedStyle = {
-          ...generatedStyle,
-          justifyContent: contentAlignmentValue
-        };
+        generatedStyle = { ...generatedStyle, justifyContent: contentAlignmentValue };
       } else {
-        generatedStyle = {
-          ...generatedStyle,
-          alignItems: contentAlignmentValue
-        };
+        generatedStyle = { ...generatedStyle, alignItems: contentAlignmentValue };
       }
     }
 
@@ -73,15 +67,9 @@ export default class ColumnRow extends React.Component<ColumnRowProps> {
       }
 
       if (this.props.type === "column") {
-        generatedStyle = {
-          ...generatedStyle,
-          alignItems: contentAlignmentValue
-        };
+        generatedStyle = { ...generatedStyle, alignItems: contentAlignmentValue };
       } else {
-        generatedStyle = {
-          ...generatedStyle,
-          justifyContent: contentAlignmentValue
-        };
+        generatedStyle = { ...generatedStyle, justifyContent: contentAlignmentValue };
       }
     }
 
@@ -146,7 +134,8 @@ export default class ColumnRow extends React.Component<ColumnRowProps> {
     // Default values
     let generatedStyle = {
       display: "flex",
-      flexDirection: direction
+      flexDirection: direction,
+      ...this.props.style
     };
 
     // Setup style based on width property
@@ -173,7 +162,7 @@ export default class ColumnRow extends React.Component<ColumnRowProps> {
       generatedStyle = { ...generatedStyle, ...contentAlignmentStyle };
     }
 
-    return { ...generatedStyle, ...this.props.style };
+    return generatedStyle;
   }
 }
 
